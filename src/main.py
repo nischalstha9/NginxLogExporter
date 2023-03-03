@@ -16,10 +16,16 @@ def write_seek(seek):
     f.close()
 
 def get_seek():
-    f = open(SEEK_FILE, "r")
-    num = int(f.readline().strip())
-    f.close()
-    return num
+    try:
+        f = open(SEEK_FILE, "r")
+        num = int(f.readline().strip())
+        f.close()
+        return num
+    except:
+        f = open(SEEK_FILE, "w")
+        f.write(str(0))
+        f.close()
+        return 0
 
 
 class NGINXCollector(object):
