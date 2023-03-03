@@ -1,0 +1,15 @@
+#https://github.com/nischalstha9/NginxLogExporter
+version: "3"
+services:
+  nginx_exporter:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - 8000:8000
+    volumes:
+      - ./src/test:/code/src/test
+      - ./src/seek_index:/code/src/seek_index
+
+    
+  

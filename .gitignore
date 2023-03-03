@@ -2,3 +2,5 @@
 
 bin
 lib
+src/seek_index
+src/test
