@@ -8,8 +8,10 @@ services:
     ports:
       - 8000:8000
     volumes:
-      - ./var/log/nginx:/code/src/NginxExporterLogStorage
-      - ./exporter-data/seek_index:/code/src/exporter-data
+      - /var/log/nginx:/code/NginxExporterLogStorage
+      - ./exporter-data/seek_index:/code/exporter-data
+    environment:
+      - LOG_FILE_NAME=jsonesc.access
 
     
   
