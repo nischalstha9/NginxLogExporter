@@ -6,8 +6,10 @@ from prometheus_client import start_http_server, Summary
 from prometheus_client.core import GaugeMetricFamily, REGISTRY
 
 BASE_DIR=os.path.dirname(os.path.realpath(__file__))
-SEEK_FILE=os.path.join(BASE_DIR,"seek_index")
-LOG_FILE_NAME="test"
+SEEK_FILE=os.path.join(BASE_DIR,"exporter-data","seek_index")
+
+LOG_FILE_DIR="NginxExporterLogStorage"
+LOG_FILE_NAME=os.environ.get("LOG_FILE_NAME","test")
 
 
 def write_seek(seek):
@@ -33,7 +35,7 @@ class NGINXCollector(object):
         pass
 
     def collect(self):
-        file_path = os.path.join(BASE_DIR,LOG_FILE_NAME)
+        file_path = os.path.join(BASE_DIR,LOG_FILE_DIR, LOG_FILE_NAME)
         resp_body_size = GaugeMetricFamily('nginx_resp_body_size', 'Response body size', labels=['host', 'uri', 'status'])
         request_length = GaugeMetricFamily('nginx_request_length', 'Request length', labels=['host', 'uri', 'status'])
         resp_time = GaugeMetricFamily('nginx_resp_time', 'Response time', labels=['host', 'uri', 'status'])

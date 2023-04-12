@@ -8,8 +8,8 @@ services:
     ports:
       - 8000:8000
     volumes:
-      - ./src/test:/code/src/test
-      - ./src/seek_index:/code/src/seek_index
+      - ./var/log/nginx:/code/src/NginxExporterLogStorage
+      - ./exporter-data/seek_index:/code/src/exporter-data
 
     
   
