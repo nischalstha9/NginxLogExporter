@@ -1,0 +1,2907 @@
+{
+  "annotations": {
+    "list": [
+      {
+        "builtIn": 1,
+        "datasource": "-- Grafana --",
+        "enable": true,
+        "hide": true,
+        "iconColor": "rgba(0, 211, 255, 1)",
+        "name": "Annotations & Alerts",
+        "type": "dashboard"
+      }
+    ]
+  },
+  "editable": true,
+  "gnetId": null,
+  "graphTooltip": 0,
+  "id": 21,
+  "iteration": 1681297627235,
+  "links": [],
+  "panels": [
+    {
+      "aliasColors": {},
+      "bars": false,
+      "dashLength": 10,
+      "dashes": false,
+      "datasource": null,
+      "fieldConfig": {
+        "defaults": {
+          "unit": "ms"
+        },
+        "overrides": []
+      },
+      "fill": 1,
+      "fillGradient": 0,
+      "gridPos": {
+        "h": 13,
+        "w": 24,
+        "x": 0,
+        "y": 0
+      },
+      "hiddenSeries": false,
+      "id": 2,
+      "legend": {
+        "avg": true,
+        "current": false,
+        "max": true,
+        "min": false,
+        "show": true,
+        "total": false,
+        "values": true
+      },
+      "lines": true,
+      "linewidth": 1,
+      "nullPointMode": "null as zero",
+      "options": {
+        "alertThreshold": true
+      },
+      "percentage": false,
+      "pluginVersion": "7.5.5",
+      "pointradius": 1,
+      "points": false,
+      "renderer": "flot",
+      "seriesOverrides": [],
+      "spaceLength": 10,
+      "stack": true,
+      "steppedLine": false,
+      "targets": [
+        {
+          "exemplar": true,
+          "expr": "nginx_resp_time{host=\"$DomainName\", uri=~\"$URI\"}",
+          "hide": false,
+          "instant": false,
+          "interval": "",
+          "legendFormat": "",
+          "refId": "A"
+        }
+      ],
+      "thresholds": [],
+      "timeFrom": null,
+      "timeRegions": [],
+      "timeShift": null,
+      "title": "Nginx Response Time",
+      "tooltip": {
+        "shared": true,
+        "sort": 0,
+        "value_type": "individual"
+      },
+      "type": "graph",
+      "xaxis": {
+        "buckets": null,
+        "mode": "time",
+        "name": null,
+        "show": true,
+        "values": []
+      },
+      "yaxes": [
+        {
+          "format": "ms",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        },
+        {
+          "format": "short",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        }
+      ],
+      "yaxis": {
+        "align": false,
+        "alignLevel": null
+      }
+    }
+  ],
+  "refresh": false,
+  "schemaVersion": 27,
+  "style": "dark",
+  "tags": [],
+  "templating": {
+    "list": [
+      {
+        "current": {
+          "selected": true,
+          "text": "exposure-bipad-staging.naxa.com.np",
+          "value": "exposure-bipad-staging.naxa.com.np"
+        },
+        "description": "ex: domain.com",
+        "error": null,
+        "hide": 0,
+        "label": "DOMAIN",
+        "name": "DomainName",
+        "options": [
+          {
+            "selected": true,
+            "text": "exposure-bipad-staging.naxa.com.np",
+            "value": "exposure-bipad-staging.naxa.com.np"
+          }
+        ],
+        "query": "exposure-bipad-staging.naxa.com.np",
+        "skipUrlSync": false,
+        "type": "textbox"
+      },
+      {
+        "allValue": null,
+        "current": {
+          "selected": false,
+          "text": "All",
+          "value": "$__all"
+        },
+        "datasource": null,
+        "definition": "label_values({__name__=\"nginx_resp_time\"},uri)",
+        "description": null,
+        "error": null,
+        "hide": 0,
+        "includeAll": true,
+        "label": "Paths of domain",
+        "multi": false,
+        "name": "URI",
+        "options": [
+          {
+            "selected": true,
+            "text": "All",
+            "value": "$__all"
+          },
+          {
+            "selected": false,
+            "text": "/",
+            "value": "/"
+          },
+          {
+            "selected": false,
+            "text": "/%7Bhouse%7D",
+            "value": "/%7Bhouse%7D"
+          },
+          {
+            "selected": false,
+            "text": "/%7Bmap%7D",
+            "value": "/%7Bmap%7D"
+          },
+          {
+            "selected": false,
+            "text": "/072b3f895dd9af5f1e6a.gif",
+            "value": "/072b3f895dd9af5f1e6a.gif"
+          },
+          {
+            "selected": false,
+            "text": "/25b22be4a98669e594d6.png",
+            "value": "/25b22be4a98669e594d6.png"
+          },
+          {
+            "selected": false,
+            "text": "/35641ebae04fb50126b8.png",
+            "value": "/35641ebae04fb50126b8.png"
+          },
+          {
+            "selected": false,
+            "text": "/51e0c114c7bcf3036a85.png",
+            "value": "/51e0c114c7bcf3036a85.png"
+          },
+          {
+            "selected": false,
+            "text": "/5861509a2bacb916c1b5.png",
+            "value": "/5861509a2bacb916c1b5.png"
+          },
+          {
+            "selected": false,
+            "text": "/5a2a9b1a2cd00e0d4ee8.png",
+            "value": "/5a2a9b1a2cd00e0d4ee8.png"
+          },
+          {
+            "selected": false,
+            "text": "/6dadb05635cc0bec779b.png",
+            "value": "/6dadb05635cc0bec779b.png"
+          },
+          {
+            "selected": false,
+            "text": "/6e775a111a682ddc775d.png",
+            "value": "/6e775a111a682ddc775d.png"
+          },
+          {
+            "selected": false,
+            "text": "/7860047397698e14c4af.png",
+            "value": "/7860047397698e14c4af.png"
+          },
+          {
+            "selected": false,
+            "text": "/813.60d5ce94d374b4d8b203.js",
+            "value": "/813.60d5ce94d374b4d8b203.js"
+          },
+          {
+            "selected": false,
+            "text": "/813.bcc083f9efb0b381c52a.css",
+            "value": "/813.bcc083f9efb0b381c52a.css"
+          },
+          {
+            "selected": false,
+            "text": "/8368f49c5b940f862f32.png",
+            "value": "/8368f49c5b940f862f32.png"
+          },
+          {
+            "selected": false,
+            "text": "/8986c95771cb146b00c8.png",
+            "value": "/8986c95771cb146b00c8.png"
+          },
+          {
+            "selected": false,
+            "text": "/9196057bf6b2b9a61a6b.png",
+            "value": "/9196057bf6b2b9a61a6b.png"
+          },
+          {
+            "selected": false,
+            "text": "/aebd3d8cfb3d82ee53e0.png",
+            "value": "/aebd3d8cfb3d82ee53e0.png"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/admingeom_tile/10/753/429.pbf?type=Municipality",
+            "value": "/api/v1/admingeom_tile/10/753/429.pbf?type=Municipality"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/admingeom_tile/10/753/430.pbf?type=Municipality",
+            "value": "/api/v1/admingeom_tile/10/753/430.pbf?type=Municipality"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/admingeom_tile/10/754/428.pbf?type=Municipality",
+            "value": "/api/v1/admingeom_tile/10/754/428.pbf?type=Municipality"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/admingeom_tile/10/754/429.pbf?type=Municipality",
+            "value": "/api/v1/admingeom_tile/10/754/429.pbf?type=Municipality"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/admingeom_tile/10/754/430.pbf?type=Municipality",
+            "value": "/api/v1/admingeom_tile/10/754/430.pbf?type=Municipality"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/admingeom_tile/10/755/428.pbf?type=Municipality",
+            "value": "/api/v1/admingeom_tile/10/755/428.pbf?type=Municipality"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/admingeom_tile/10/755/429.pbf?type=Municipality",
+            "value": "/api/v1/admingeom_tile/10/755/429.pbf?type=Municipality"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/admingeom_tile/10/755/430.pbf?type=Municipality",
+            "value": "/api/v1/admingeom_tile/10/755/430.pbf?type=Municipality"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/admingeom_tile/10/756/428.pbf?type=Municipality",
+            "value": "/api/v1/admingeom_tile/10/756/428.pbf?type=Municipality"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/admingeom_tile/10/756/429.pbf?type=Municipality",
+            "value": "/api/v1/admingeom_tile/10/756/429.pbf?type=Municipality"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/admingeom_tile/10/756/430.pbf?type=Municipality",
+            "value": "/api/v1/admingeom_tile/10/756/430.pbf?type=Municipality"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/admingeom_tile/10/757/428.pbf?type=Municipality",
+            "value": "/api/v1/admingeom_tile/10/757/428.pbf?type=Municipality"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/admingeom_tile/10/757/429.pbf?type=Municipality",
+            "value": "/api/v1/admingeom_tile/10/757/429.pbf?type=Municipality"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/admingeom_tile/11/1508/859.pbf?type=Municipality",
+            "value": "/api/v1/admingeom_tile/11/1508/859.pbf?type=Municipality"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/admingeom_tile/11/1508/860.pbf?type=Municipality",
+            "value": "/api/v1/admingeom_tile/11/1508/860.pbf?type=Municipality"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/admingeom_tile/11/1509/859.pbf?type=Municipality",
+            "value": "/api/v1/admingeom_tile/11/1509/859.pbf?type=Municipality"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/admingeom_tile/11/1509/860.pbf?type=Municipality",
+            "value": "/api/v1/admingeom_tile/11/1509/860.pbf?type=Municipality"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/admingeom_tile/11/1510/857.pbf?type=Municipality",
+            "value": "/api/v1/admingeom_tile/11/1510/857.pbf?type=Municipality"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/admingeom_tile/11/1510/858.pbf?type=Municipality",
+            "value": "/api/v1/admingeom_tile/11/1510/858.pbf?type=Municipality"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/admingeom_tile/11/1510/859.pbf?type=Municipality",
+            "value": "/api/v1/admingeom_tile/11/1510/859.pbf?type=Municipality"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/admingeom_tile/11/1510/860.pbf?type=Municipality",
+            "value": "/api/v1/admingeom_tile/11/1510/860.pbf?type=Municipality"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/admingeom_tile/11/1511/857.pbf?type=Municipality",
+            "value": "/api/v1/admingeom_tile/11/1511/857.pbf?type=Municipality"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/admingeom_tile/11/1511/858.pbf?type=Municipality",
+            "value": "/api/v1/admingeom_tile/11/1511/858.pbf?type=Municipality"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/admingeom_tile/11/1511/859.pbf?type=Municipality",
+            "value": "/api/v1/admingeom_tile/11/1511/859.pbf?type=Municipality"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/admingeom_tile/11/1512/857.pbf?type=Municipality",
+            "value": "/api/v1/admingeom_tile/11/1512/857.pbf?type=Municipality"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/admingeom_tile/11/1512/858.pbf?type=Municipality",
+            "value": "/api/v1/admingeom_tile/11/1512/858.pbf?type=Municipality"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/admingeom_tile/11/1512/859.pbf?type=Municipality",
+            "value": "/api/v1/admingeom_tile/11/1512/859.pbf?type=Municipality"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/admingeom_tile/11/1513/857.pbf?type=Municipality",
+            "value": "/api/v1/admingeom_tile/11/1513/857.pbf?type=Municipality"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/admingeom_tile/11/1513/858.pbf?type=Municipality",
+            "value": "/api/v1/admingeom_tile/11/1513/858.pbf?type=Municipality"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/admingeom_tile/12/3017/1718.pbf?type=Municipality",
+            "value": "/api/v1/admingeom_tile/12/3017/1718.pbf?type=Municipality"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/admingeom_tile/12/3017/1719.pbf?type=Municipality",
+            "value": "/api/v1/admingeom_tile/12/3017/1719.pbf?type=Municipality"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/admingeom_tile/12/3017/1720.pbf?type=Municipality",
+            "value": "/api/v1/admingeom_tile/12/3017/1720.pbf?type=Municipality"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/admingeom_tile/12/3018/1718.pbf?type=Municipality",
+            "value": "/api/v1/admingeom_tile/12/3018/1718.pbf?type=Municipality"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/admingeom_tile/12/3018/1719.pbf?type=Municipality",
+            "value": "/api/v1/admingeom_tile/12/3018/1719.pbf?type=Municipality"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/admingeom_tile/12/3018/1720.pbf?type=Municipality",
+            "value": "/api/v1/admingeom_tile/12/3018/1720.pbf?type=Municipality"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/admingeom_tile/12/3019/1718.pbf?type=Municipality",
+            "value": "/api/v1/admingeom_tile/12/3019/1718.pbf?type=Municipality"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/admingeom_tile/12/3019/1719.pbf?type=Municipality",
+            "value": "/api/v1/admingeom_tile/12/3019/1719.pbf?type=Municipality"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/admingeom_tile/12/3019/1720.pbf?type=Municipality",
+            "value": "/api/v1/admingeom_tile/12/3019/1720.pbf?type=Municipality"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/admingeom_tile/12/3021/1716.pbf?type=Municipality",
+            "value": "/api/v1/admingeom_tile/12/3021/1716.pbf?type=Municipality"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/admingeom_tile/12/3021/1717.pbf?type=Municipality",
+            "value": "/api/v1/admingeom_tile/12/3021/1717.pbf?type=Municipality"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/admingeom_tile/12/3022/1716.pbf?type=Municipality",
+            "value": "/api/v1/admingeom_tile/12/3022/1716.pbf?type=Municipality"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/admingeom_tile/12/3022/1717.pbf?type=Municipality",
+            "value": "/api/v1/admingeom_tile/12/3022/1717.pbf?type=Municipality"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/admingeom_tile/12/3022/1718.pbf?type=Municipality",
+            "value": "/api/v1/admingeom_tile/12/3022/1718.pbf?type=Municipality"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/admingeom_tile/12/3022/1719.pbf?type=Municipality",
+            "value": "/api/v1/admingeom_tile/12/3022/1719.pbf?type=Municipality"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/admingeom_tile/12/3023/1716.pbf?type=Municipality",
+            "value": "/api/v1/admingeom_tile/12/3023/1716.pbf?type=Municipality"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/admingeom_tile/12/3023/1717.pbf?type=Municipality",
+            "value": "/api/v1/admingeom_tile/12/3023/1717.pbf?type=Municipality"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/admingeom_tile/12/3023/1718.pbf?type=Municipality",
+            "value": "/api/v1/admingeom_tile/12/3023/1718.pbf?type=Municipality"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/admingeom_tile/12/3023/1719.pbf?type=Municipality",
+            "value": "/api/v1/admingeom_tile/12/3023/1719.pbf?type=Municipality"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/admingeom_tile/12/3024/1716.pbf?type=Municipality",
+            "value": "/api/v1/admingeom_tile/12/3024/1716.pbf?type=Municipality"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/admingeom_tile/12/3024/1717.pbf?type=Municipality",
+            "value": "/api/v1/admingeom_tile/12/3024/1717.pbf?type=Municipality"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/admingeom_tile/12/3024/1718.pbf?type=Municipality",
+            "value": "/api/v1/admingeom_tile/12/3024/1718.pbf?type=Municipality"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/admingeom_tile/12/3024/1719.pbf?type=Municipality",
+            "value": "/api/v1/admingeom_tile/12/3024/1719.pbf?type=Municipality"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/admingeom_tile/12/3025/1716.pbf?type=Municipality",
+            "value": "/api/v1/admingeom_tile/12/3025/1716.pbf?type=Municipality"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/admingeom_tile/12/3025/1717.pbf?type=Municipality",
+            "value": "/api/v1/admingeom_tile/12/3025/1717.pbf?type=Municipality"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/admingeom_tile/12/3025/1718.pbf?type=Municipality",
+            "value": "/api/v1/admingeom_tile/12/3025/1718.pbf?type=Municipality"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/admingeom_tile/12/3025/1719.pbf?type=Municipality",
+            "value": "/api/v1/admingeom_tile/12/3025/1719.pbf?type=Municipality"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/admingeom_tile/13/6035/3438.pbf?type=Municipality",
+            "value": "/api/v1/admingeom_tile/13/6035/3438.pbf?type=Municipality"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/admingeom_tile/13/6035/3439.pbf?type=Municipality",
+            "value": "/api/v1/admingeom_tile/13/6035/3439.pbf?type=Municipality"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/admingeom_tile/13/6036/3438.pbf?type=Municipality",
+            "value": "/api/v1/admingeom_tile/13/6036/3438.pbf?type=Municipality"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/admingeom_tile/13/6036/3439.pbf?type=Municipality",
+            "value": "/api/v1/admingeom_tile/13/6036/3439.pbf?type=Municipality"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/admingeom_tile/13/6037/3438.pbf?type=Municipality",
+            "value": "/api/v1/admingeom_tile/13/6037/3438.pbf?type=Municipality"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/admingeom_tile/13/6037/3439.pbf?type=Municipality",
+            "value": "/api/v1/admingeom_tile/13/6037/3439.pbf?type=Municipality"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/admingeom_tile/13/6045/3435.pbf?type=Municipality",
+            "value": "/api/v1/admingeom_tile/13/6045/3435.pbf?type=Municipality"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/admingeom_tile/13/6045/3436.pbf?type=Municipality",
+            "value": "/api/v1/admingeom_tile/13/6045/3436.pbf?type=Municipality"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/admingeom_tile/13/6045/3437.pbf?type=Municipality",
+            "value": "/api/v1/admingeom_tile/13/6045/3437.pbf?type=Municipality"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/admingeom_tile/13/6046/3435.pbf?type=District",
+            "value": "/api/v1/admingeom_tile/13/6046/3435.pbf?type=District"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/admingeom_tile/13/6046/3435.pbf?type=Municipality",
+            "value": "/api/v1/admingeom_tile/13/6046/3435.pbf?type=Municipality"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/admingeom_tile/13/6046/3436.pbf?type=District",
+            "value": "/api/v1/admingeom_tile/13/6046/3436.pbf?type=District"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/admingeom_tile/13/6046/3436.pbf?type=Municipality",
+            "value": "/api/v1/admingeom_tile/13/6046/3436.pbf?type=Municipality"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/admingeom_tile/13/6046/3437.pbf?type=District",
+            "value": "/api/v1/admingeom_tile/13/6046/3437.pbf?type=District"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/admingeom_tile/13/6046/3437.pbf?type=Municipality",
+            "value": "/api/v1/admingeom_tile/13/6046/3437.pbf?type=Municipality"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/admingeom_tile/13/6047/3435.pbf?type=District",
+            "value": "/api/v1/admingeom_tile/13/6047/3435.pbf?type=District"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/admingeom_tile/13/6047/3435.pbf?type=Municipality",
+            "value": "/api/v1/admingeom_tile/13/6047/3435.pbf?type=Municipality"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/admingeom_tile/13/6047/3436.pbf?type=District",
+            "value": "/api/v1/admingeom_tile/13/6047/3436.pbf?type=District"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/admingeom_tile/13/6047/3436.pbf?type=Municipality",
+            "value": "/api/v1/admingeom_tile/13/6047/3436.pbf?type=Municipality"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/admingeom_tile/13/6047/3437.pbf?type=District",
+            "value": "/api/v1/admingeom_tile/13/6047/3437.pbf?type=District"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/admingeom_tile/13/6047/3437.pbf?type=Municipality",
+            "value": "/api/v1/admingeom_tile/13/6047/3437.pbf?type=Municipality"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/admingeom_tile/13/6048/3435.pbf?type=District",
+            "value": "/api/v1/admingeom_tile/13/6048/3435.pbf?type=District"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/admingeom_tile/13/6048/3435.pbf?type=Municipality",
+            "value": "/api/v1/admingeom_tile/13/6048/3435.pbf?type=Municipality"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/admingeom_tile/13/6048/3436.pbf?type=District",
+            "value": "/api/v1/admingeom_tile/13/6048/3436.pbf?type=District"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/admingeom_tile/13/6048/3436.pbf?type=Municipality",
+            "value": "/api/v1/admingeom_tile/13/6048/3436.pbf?type=Municipality"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/admingeom_tile/13/6048/3437.pbf?type=District",
+            "value": "/api/v1/admingeom_tile/13/6048/3437.pbf?type=District"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/admingeom_tile/13/6048/3437.pbf?type=Municipality",
+            "value": "/api/v1/admingeom_tile/13/6048/3437.pbf?type=Municipality"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/admingeom_tile/13/6049/3435.pbf?type=Municipality",
+            "value": "/api/v1/admingeom_tile/13/6049/3435.pbf?type=Municipality"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/admingeom_tile/13/6049/3436.pbf?type=Municipality",
+            "value": "/api/v1/admingeom_tile/13/6049/3436.pbf?type=Municipality"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/admingeom_tile/13/6049/3437.pbf?type=Municipality",
+            "value": "/api/v1/admingeom_tile/13/6049/3437.pbf?type=Municipality"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/admingeom_tile/14/12072/6879.pbf?type=Municipality",
+            "value": "/api/v1/admingeom_tile/14/12072/6879.pbf?type=Municipality"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/admingeom_tile/14/12073/6879.pbf?type=Municipality",
+            "value": "/api/v1/admingeom_tile/14/12073/6879.pbf?type=Municipality"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/admingeom_tile/14/12094/6873.pbf?type=Municipality",
+            "value": "/api/v1/admingeom_tile/14/12094/6873.pbf?type=Municipality"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/admingeom_tile/14/12094/6875.pbf?type=Municipality",
+            "value": "/api/v1/admingeom_tile/14/12094/6875.pbf?type=Municipality"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/admingeom_tile/14/12095/6873.pbf?type=Municipality",
+            "value": "/api/v1/admingeom_tile/14/12095/6873.pbf?type=Municipality"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/admingeom_tile/14/12095/6874.pbf?type=Municipality",
+            "value": "/api/v1/admingeom_tile/14/12095/6874.pbf?type=Municipality"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/admingeom_tile/14/12095/6875.pbf?type=Municipality",
+            "value": "/api/v1/admingeom_tile/14/12095/6875.pbf?type=Municipality"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/admingeom_tile/14/12096/6873.pbf?type=Municipality",
+            "value": "/api/v1/admingeom_tile/14/12096/6873.pbf?type=Municipality"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/admingeom_tile/14/12096/6874.pbf?type=Municipality",
+            "value": "/api/v1/admingeom_tile/14/12096/6874.pbf?type=Municipality"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/admingeom_tile/14/12096/6875.pbf?type=Municipality",
+            "value": "/api/v1/admingeom_tile/14/12096/6875.pbf?type=Municipality"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/admingeom_tile/15/24145/13758.pbf?type=Municipality",
+            "value": "/api/v1/admingeom_tile/15/24145/13758.pbf?type=Municipality"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/admingeom_tile/15/24145/13759.pbf?type=Municipality",
+            "value": "/api/v1/admingeom_tile/15/24145/13759.pbf?type=Municipality"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/admingeom_tile/15/24146/13758.pbf?type=Municipality",
+            "value": "/api/v1/admingeom_tile/15/24146/13758.pbf?type=Municipality"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/admingeom_tile/15/24146/13759.pbf?type=Municipality",
+            "value": "/api/v1/admingeom_tile/15/24146/13759.pbf?type=Municipality"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/admingeom_tile/15/24189/13748.pbf?type=Municipality",
+            "value": "/api/v1/admingeom_tile/15/24189/13748.pbf?type=Municipality"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/admingeom_tile/15/24190/13748.pbf?type=Municipality",
+            "value": "/api/v1/admingeom_tile/15/24190/13748.pbf?type=Municipality"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/admingeom_tile/15/24190/13749.pbf?type=Municipality",
+            "value": "/api/v1/admingeom_tile/15/24190/13749.pbf?type=Municipality"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/admingeom_tile/15/24191/13747.pbf?type=Municipality",
+            "value": "/api/v1/admingeom_tile/15/24191/13747.pbf?type=Municipality"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/admingeom_tile/15/24191/13749.pbf?type=Municipality",
+            "value": "/api/v1/admingeom_tile/15/24191/13749.pbf?type=Municipality"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/admingeom_tile/16/48291/27516.pbf?type=Municipality",
+            "value": "/api/v1/admingeom_tile/16/48291/27516.pbf?type=Municipality"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/admingeom_tile/16/48291/27517.pbf?type=Municipality",
+            "value": "/api/v1/admingeom_tile/16/48291/27517.pbf?type=Municipality"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/admingeom_tile/16/48292/27516.pbf?type=Municipality",
+            "value": "/api/v1/admingeom_tile/16/48292/27516.pbf?type=Municipality"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/admingeom_tile/16/48292/27517.pbf?type=Municipality",
+            "value": "/api/v1/admingeom_tile/16/48292/27517.pbf?type=Municipality"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/admingeom_tile/17/96582/55033.pbf?type=Municipality",
+            "value": "/api/v1/admingeom_tile/17/96582/55033.pbf?type=Municipality"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/admingeom_tile/17/96582/55034.pbf?type=Municipality",
+            "value": "/api/v1/admingeom_tile/17/96582/55034.pbf?type=Municipality"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/admingeom_tile/17/96583/55033.pbf?type=Municipality",
+            "value": "/api/v1/admingeom_tile/17/96583/55033.pbf?type=Municipality"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/admingeom_tile/17/96583/55034.pbf?type=Municipality",
+            "value": "/api/v1/admingeom_tile/17/96583/55034.pbf?type=Municipality"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/admingeom_tile/17/96584/55033.pbf?type=Municipality",
+            "value": "/api/v1/admingeom_tile/17/96584/55033.pbf?type=Municipality"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/admingeom_tile/17/96584/55034.pbf?type=Municipality",
+            "value": "/api/v1/admingeom_tile/17/96584/55034.pbf?type=Municipality"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/admingeom_tile/17/96585/55033.pbf?type=Municipality",
+            "value": "/api/v1/admingeom_tile/17/96585/55033.pbf?type=Municipality"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/admingeom_tile/17/96585/55034.pbf?type=Municipality",
+            "value": "/api/v1/admingeom_tile/17/96585/55034.pbf?type=Municipality"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/admingeom_tile/18/193167/110066.pbf?type=Municipality",
+            "value": "/api/v1/admingeom_tile/18/193167/110066.pbf?type=Municipality"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/admingeom_tile/18/193167/110067.pbf?type=Municipality",
+            "value": "/api/v1/admingeom_tile/18/193167/110067.pbf?type=Municipality"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/admingeom_tile/19/386334/220133.pbf?type=Municipality",
+            "value": "/api/v1/admingeom_tile/19/386334/220133.pbf?type=Municipality"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/admingeom_tile/19/386335/220133.pbf?type=Municipality",
+            "value": "/api/v1/admingeom_tile/19/386335/220133.pbf?type=Municipality"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/admingeom_tile/2/2/1.pbf?type=Province",
+            "value": "/api/v1/admingeom_tile/2/2/1.pbf?type=Province"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/admingeom_tile/20/772669/440266.pbf?type=Municipality",
+            "value": "/api/v1/admingeom_tile/20/772669/440266.pbf?type=Municipality"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/admingeom_tile/20/772669/440267.pbf?type=Municipality",
+            "value": "/api/v1/admingeom_tile/20/772669/440267.pbf?type=Municipality"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/admingeom_tile/20/772670/440266.pbf?type=Municipality",
+            "value": "/api/v1/admingeom_tile/20/772670/440266.pbf?type=Municipality"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/admingeom_tile/20/772670/440267.pbf?type=Municipality",
+            "value": "/api/v1/admingeom_tile/20/772670/440267.pbf?type=Municipality"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/admingeom_tile/20/772671/440266.pbf?type=Municipality",
+            "value": "/api/v1/admingeom_tile/20/772671/440266.pbf?type=Municipality"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/admingeom_tile/20/772671/440267.pbf?type=Municipality",
+            "value": "/api/v1/admingeom_tile/20/772671/440267.pbf?type=Municipality"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/admingeom_tile/3/5/3.pbf?type=Province",
+            "value": "/api/v1/admingeom_tile/3/5/3.pbf?type=Province"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/admingeom_tile/4/11/6.pbf?type=Province",
+            "value": "/api/v1/admingeom_tile/4/11/6.pbf?type=Province"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/admingeom_tile/5/23/13.pbf?type=Province",
+            "value": "/api/v1/admingeom_tile/5/23/13.pbf?type=Province"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/admingeom_tile/6/46/26.pbf?type=District",
+            "value": "/api/v1/admingeom_tile/6/46/26.pbf?type=District"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/admingeom_tile/6/46/26.pbf?type=Province",
+            "value": "/api/v1/admingeom_tile/6/46/26.pbf?type=Province"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/admingeom_tile/6/47/26.pbf?type=District",
+            "value": "/api/v1/admingeom_tile/6/47/26.pbf?type=District"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/admingeom_tile/6/47/26.pbf?type=Province",
+            "value": "/api/v1/admingeom_tile/6/47/26.pbf?type=Province"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/admingeom_tile/6/47/27.pbf?type=Province",
+            "value": "/api/v1/admingeom_tile/6/47/27.pbf?type=Province"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/admingeom_tile/7/92/52.pbf?type=District",
+            "value": "/api/v1/admingeom_tile/7/92/52.pbf?type=District"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/admingeom_tile/7/92/53.pbf?type=District",
+            "value": "/api/v1/admingeom_tile/7/92/53.pbf?type=District"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/admingeom_tile/7/93/52.pbf?type=District",
+            "value": "/api/v1/admingeom_tile/7/93/52.pbf?type=District"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/admingeom_tile/7/93/53.pbf?type=District",
+            "value": "/api/v1/admingeom_tile/7/93/53.pbf?type=District"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/admingeom_tile/7/94/53.pbf?type=District",
+            "value": "/api/v1/admingeom_tile/7/94/53.pbf?type=District"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/admingeom_tile/7/94/54.pbf?type=District",
+            "value": "/api/v1/admingeom_tile/7/94/54.pbf?type=District"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/admingeom_tile/7/95/53.pbf?type=District",
+            "value": "/api/v1/admingeom_tile/7/95/53.pbf?type=District"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/admingeom_tile/7/95/54.pbf?type=District",
+            "value": "/api/v1/admingeom_tile/7/95/54.pbf?type=District"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/admingeom_tile/8/187/105.pbf?type=District",
+            "value": "/api/v1/admingeom_tile/8/187/105.pbf?type=District"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/admingeom_tile/8/187/106.pbf?type=District",
+            "value": "/api/v1/admingeom_tile/8/187/106.pbf?type=District"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/admingeom_tile/8/187/107.pbf?type=District",
+            "value": "/api/v1/admingeom_tile/8/187/107.pbf?type=District"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/admingeom_tile/8/188/106.pbf?type=District",
+            "value": "/api/v1/admingeom_tile/8/188/106.pbf?type=District"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/admingeom_tile/8/188/107.pbf?type=District",
+            "value": "/api/v1/admingeom_tile/8/188/107.pbf?type=District"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/admingeom_tile/8/188/108.pbf?type=District",
+            "value": "/api/v1/admingeom_tile/8/188/108.pbf?type=District"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/admingeom_tile/8/189/107.pbf?type=District",
+            "value": "/api/v1/admingeom_tile/8/189/107.pbf?type=District"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/admingeom_tile/8/189/108.pbf?type=District",
+            "value": "/api/v1/admingeom_tile/8/189/108.pbf?type=District"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/admingeom_tile/8/190/107.pbf?type=District",
+            "value": "/api/v1/admingeom_tile/8/190/107.pbf?type=District"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/admingeom_tile/9/376/213.pbf?type=District",
+            "value": "/api/v1/admingeom_tile/9/376/213.pbf?type=District"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/admingeom_tile/9/376/213.pbf?type=Municipality",
+            "value": "/api/v1/admingeom_tile/9/376/213.pbf?type=Municipality"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/admingeom_tile/9/376/214.pbf?type=District",
+            "value": "/api/v1/admingeom_tile/9/376/214.pbf?type=District"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/admingeom_tile/9/376/214.pbf?type=Municipality",
+            "value": "/api/v1/admingeom_tile/9/376/214.pbf?type=Municipality"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/admingeom_tile/9/376/215.pbf?type=District",
+            "value": "/api/v1/admingeom_tile/9/376/215.pbf?type=District"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/admingeom_tile/9/377/213.pbf?type=District",
+            "value": "/api/v1/admingeom_tile/9/377/213.pbf?type=District"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/admingeom_tile/9/377/213.pbf?type=Municipality",
+            "value": "/api/v1/admingeom_tile/9/377/213.pbf?type=Municipality"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/admingeom_tile/9/377/214.pbf?type=District",
+            "value": "/api/v1/admingeom_tile/9/377/214.pbf?type=District"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/admingeom_tile/9/377/214.pbf?type=Municipality",
+            "value": "/api/v1/admingeom_tile/9/377/214.pbf?type=Municipality"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/admingeom_tile/9/377/215.pbf?type=District",
+            "value": "/api/v1/admingeom_tile/9/377/215.pbf?type=District"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/admingeom_tile/9/377/215.pbf?type=Municipality",
+            "value": "/api/v1/admingeom_tile/9/377/215.pbf?type=Municipality"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/admingeom_tile/9/378/214.pbf?type=District",
+            "value": "/api/v1/admingeom_tile/9/378/214.pbf?type=District"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/admingeom_tile/9/378/214.pbf?type=Municipality",
+            "value": "/api/v1/admingeom_tile/9/378/214.pbf?type=Municipality"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/admingeom_tile/9/378/215.pbf?type=District",
+            "value": "/api/v1/admingeom_tile/9/378/215.pbf?type=District"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/admingeom_tile/9/378/215.pbf?type=Municipality",
+            "value": "/api/v1/admingeom_tile/9/378/215.pbf?type=Municipality"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/admingeom_tile/9/379/214.pbf?type=District",
+            "value": "/api/v1/admingeom_tile/9/379/214.pbf?type=District"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/auth/login/",
+            "value": "/api/v1/auth/login/"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/building_tile/10/754/429.pbf",
+            "value": "/api/v1/building_tile/10/754/429.pbf"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/building_tile/10/755/429.pbf",
+            "value": "/api/v1/building_tile/10/755/429.pbf"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/building_tile/10/755/430.pbf",
+            "value": "/api/v1/building_tile/10/755/430.pbf"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/building_tile/10/756/429.pbf",
+            "value": "/api/v1/building_tile/10/756/429.pbf"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/building_tile/10/756/430.pbf",
+            "value": "/api/v1/building_tile/10/756/430.pbf"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/building_tile/11/1509/859.pbf",
+            "value": "/api/v1/building_tile/11/1509/859.pbf"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/building_tile/11/1510/858.pbf",
+            "value": "/api/v1/building_tile/11/1510/858.pbf"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/building_tile/11/1510/859.pbf",
+            "value": "/api/v1/building_tile/11/1510/859.pbf"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/building_tile/11/1511/858.pbf",
+            "value": "/api/v1/building_tile/11/1511/858.pbf"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/building_tile/11/1511/859.pbf",
+            "value": "/api/v1/building_tile/11/1511/859.pbf"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/building_tile/11/1512/858.pbf",
+            "value": "/api/v1/building_tile/11/1512/858.pbf"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/building_tile/11/1512/859.pbf",
+            "value": "/api/v1/building_tile/11/1512/859.pbf"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/building_tile/11/1513/858.pbf",
+            "value": "/api/v1/building_tile/11/1513/858.pbf"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/building_tile/12/3018/1719.pbf",
+            "value": "/api/v1/building_tile/12/3018/1719.pbf"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/building_tile/12/3021/1717.pbf",
+            "value": "/api/v1/building_tile/12/3021/1717.pbf"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/building_tile/12/3022/1717.pbf",
+            "value": "/api/v1/building_tile/12/3022/1717.pbf"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/building_tile/12/3022/1718.pbf",
+            "value": "/api/v1/building_tile/12/3022/1718.pbf"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/building_tile/12/3022/1719.pbf",
+            "value": "/api/v1/building_tile/12/3022/1719.pbf"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/building_tile/12/3023/1718.pbf",
+            "value": "/api/v1/building_tile/12/3023/1718.pbf"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/building_tile/12/3023/1719.pbf",
+            "value": "/api/v1/building_tile/12/3023/1719.pbf"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/building_tile/12/3024/1716.pbf",
+            "value": "/api/v1/building_tile/12/3024/1716.pbf"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/building_tile/12/3024/1717.pbf",
+            "value": "/api/v1/building_tile/12/3024/1717.pbf"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/building_tile/12/3024/1718.pbf",
+            "value": "/api/v1/building_tile/12/3024/1718.pbf"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/building_tile/12/3024/1719.pbf",
+            "value": "/api/v1/building_tile/12/3024/1719.pbf"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/building_tile/12/3025/1716.pbf",
+            "value": "/api/v1/building_tile/12/3025/1716.pbf"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/building_tile/12/3025/1717.pbf",
+            "value": "/api/v1/building_tile/12/3025/1717.pbf"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/building_tile/12/3025/1718.pbf",
+            "value": "/api/v1/building_tile/12/3025/1718.pbf"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/building_tile/12/3025/1719.pbf",
+            "value": "/api/v1/building_tile/12/3025/1719.pbf"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/building_tile/13/6036/3439.pbf",
+            "value": "/api/v1/building_tile/13/6036/3439.pbf"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/building_tile/13/6045/3435.pbf",
+            "value": "/api/v1/building_tile/13/6045/3435.pbf"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/building_tile/13/6045/3436.pbf",
+            "value": "/api/v1/building_tile/13/6045/3436.pbf"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/building_tile/13/6045/3437.pbf",
+            "value": "/api/v1/building_tile/13/6045/3437.pbf"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/building_tile/13/6046/3436.pbf",
+            "value": "/api/v1/building_tile/13/6046/3436.pbf"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/building_tile/13/6046/3437.pbf",
+            "value": "/api/v1/building_tile/13/6046/3437.pbf"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/building_tile/13/6047/3436.pbf",
+            "value": "/api/v1/building_tile/13/6047/3436.pbf"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/building_tile/13/6047/3437.pbf",
+            "value": "/api/v1/building_tile/13/6047/3437.pbf"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/building_tile/13/6047/3438.pbf",
+            "value": "/api/v1/building_tile/13/6047/3438.pbf"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/building_tile/13/6048/3437.pbf",
+            "value": "/api/v1/building_tile/13/6048/3437.pbf"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/building_tile/13/6048/3438.pbf",
+            "value": "/api/v1/building_tile/13/6048/3438.pbf"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/building_tile/13/6049/3437.pbf",
+            "value": "/api/v1/building_tile/13/6049/3437.pbf"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/building_tile/14/12072/6879.pbf",
+            "value": "/api/v1/building_tile/14/12072/6879.pbf"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/building_tile/14/12094/6873.pbf",
+            "value": "/api/v1/building_tile/14/12094/6873.pbf"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/building_tile/14/12094/6875.pbf",
+            "value": "/api/v1/building_tile/14/12094/6875.pbf"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/building_tile/14/12095/6873.pbf",
+            "value": "/api/v1/building_tile/14/12095/6873.pbf"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/building_tile/14/12095/6874.pbf",
+            "value": "/api/v1/building_tile/14/12095/6874.pbf"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/building_tile/14/12095/6875.pbf",
+            "value": "/api/v1/building_tile/14/12095/6875.pbf"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/building_tile/14/12096/6875.pbf",
+            "value": "/api/v1/building_tile/14/12096/6875.pbf"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/building_tile/15/24145/13758.pbf",
+            "value": "/api/v1/building_tile/15/24145/13758.pbf"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/building_tile/15/24189/13747.pbf",
+            "value": "/api/v1/building_tile/15/24189/13747.pbf"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/building_tile/15/24189/13748.pbf",
+            "value": "/api/v1/building_tile/15/24189/13748.pbf"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/building_tile/15/24189/13749.pbf",
+            "value": "/api/v1/building_tile/15/24189/13749.pbf"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/building_tile/15/24189/13750.pbf",
+            "value": "/api/v1/building_tile/15/24189/13750.pbf"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/building_tile/15/24190/13747.pbf",
+            "value": "/api/v1/building_tile/15/24190/13747.pbf"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/building_tile/15/24190/13748.pbf",
+            "value": "/api/v1/building_tile/15/24190/13748.pbf"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/building_tile/15/24190/13750.pbf",
+            "value": "/api/v1/building_tile/15/24190/13750.pbf"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/building_tile/15/24191/13749.pbf",
+            "value": "/api/v1/building_tile/15/24191/13749.pbf"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/building_tile/15/24191/13750.pbf",
+            "value": "/api/v1/building_tile/15/24191/13750.pbf"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/building_tile/16/48291/27516.pbf",
+            "value": "/api/v1/building_tile/16/48291/27516.pbf"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/building_tile/17/96583/55033.pbf",
+            "value": "/api/v1/building_tile/17/96583/55033.pbf"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/building_tile/18/193167/110066.pbf",
+            "value": "/api/v1/building_tile/18/193167/110066.pbf"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/building_tile/19/386335/220133.pbf",
+            "value": "/api/v1/building_tile/19/386335/220133.pbf"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/building_tile/20/772670/440267.pbf",
+            "value": "/api/v1/building_tile/20/772670/440267.pbf"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/building_tile/9/376/213.pbf",
+            "value": "/api/v1/building_tile/9/376/213.pbf"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/building_tile/9/376/214.pbf",
+            "value": "/api/v1/building_tile/9/376/214.pbf"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/building_tile/9/377/214.pbf",
+            "value": "/api/v1/building_tile/9/377/214.pbf"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/building_tile/9/377/215.pbf",
+            "value": "/api/v1/building_tile/9/377/215.pbf"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/building_tile/9/378/214.pbf",
+            "value": "/api/v1/building_tile/9/378/214.pbf"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/building_tile/9/378/215.pbf",
+            "value": "/api/v1/building_tile/9/378/215.pbf"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/district/?limit=8000&offset=0",
+            "value": "/api/v1/district/?limit=8000&offset=0"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/get_building_cumulative_datewise_count/?start_date=2023-4-6&end_date=2023-4-12",
+            "value": "/api/v1/get_building_cumulative_datewise_count/?start_date=2023-4-6&end_date=2023-4-12"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/get_building_submission_counts/",
+            "value": "/api/v1/get_building_submission_counts/"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/get_building_submission_counts/?review_state=approved",
+            "value": "/api/v1/get_building_submission_counts/?review_state=approved"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/get_building_submission_counts/?status=Flagged,Resolved",
+            "value": "/api/v1/get_building_submission_counts/?status=Flagged,Resolved"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/get_building_submission_counts/?type=education&start_date=2023-4-6&end_date=2023-4-12",
+            "value": "/api/v1/get_building_submission_counts/?type=education&start_date=2023-4-6&end_date=2023-4-12"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/get_building_submission_counts/?type=health&start_date=2023-4-6&end_date=2023-4-12",
+            "value": "/api/v1/get_building_submission_counts/?type=health&start_date=2023-4-6&end_date=2023-4-12"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/get_building_submission_counts/?type=public_service&start_date=2023-4-6&end_date=2023-4-12",
+            "value": "/api/v1/get_building_submission_counts/?type=public_service&start_date=2023-4-6&end_date=2023-4-12"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/get_building_type_counts/",
+            "value": "/api/v1/get_building_type_counts/"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/get_clustering_building_counts/?type=district",
+            "value": "/api/v1/get_clustering_building_counts/?type=district"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/get_clustering_building_counts/?type=municipality",
+            "value": "/api/v1/get_clustering_building_counts/?type=municipality"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/get_clustering_building_counts/?type=province",
+            "value": "/api/v1/get_clustering_building_counts/?type=province"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/get_datewise_count/?start_date=2023-4-6&end_date=2023-4-12&form_choice=Building",
+            "value": "/api/v1/get_datewise_count/?start_date=2023-4-6&end_date=2023-4-12&form_choice=Building"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/get_datewise_digitized_building/?user=1090&start_date=2023-4-6&end_date=2023-4-12",
+            "value": "/api/v1/get_datewise_digitized_building/?user=1090&start_date=2023-4-6&end_date=2023-4-12"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/get_datewise_digitized_building/?user=1091&start_date=2023-4-6&end_date=2023-4-12",
+            "value": "/api/v1/get_datewise_digitized_building/?user=1091&start_date=2023-4-6&end_date=2023-4-12"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/get_digitizer_list/",
+            "value": "/api/v1/get_digitizer_list/"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/get_facility_submission_counts/",
+            "value": "/api/v1/get_facility_submission_counts/"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/get_submission_counts/?form_choice=Facility",
+            "value": "/api/v1/get_submission_counts/?form_choice=Facility"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/get_submission_counts/?form_choice=Facility&review_state=approved",
+            "value": "/api/v1/get_submission_counts/?form_choice=Facility&review_state=approved"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/municipality/?limit=8000&offset=0",
+            "value": "/api/v1/municipality/?limit=8000&offset=0"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/point_tile/10/754/429.pbf",
+            "value": "/api/v1/point_tile/10/754/429.pbf"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/point_tile/10/755/429.pbf",
+            "value": "/api/v1/point_tile/10/755/429.pbf"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/point_tile/10/755/430.pbf",
+            "value": "/api/v1/point_tile/10/755/430.pbf"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/point_tile/10/756/429.pbf",
+            "value": "/api/v1/point_tile/10/756/429.pbf"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/point_tile/10/756/430.pbf",
+            "value": "/api/v1/point_tile/10/756/430.pbf"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/point_tile/11/1509/859.pbf",
+            "value": "/api/v1/point_tile/11/1509/859.pbf"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/point_tile/11/1510/858.pbf",
+            "value": "/api/v1/point_tile/11/1510/858.pbf"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/point_tile/11/1510/859.pbf",
+            "value": "/api/v1/point_tile/11/1510/859.pbf"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/point_tile/11/1511/858.pbf",
+            "value": "/api/v1/point_tile/11/1511/858.pbf"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/point_tile/11/1511/859.pbf",
+            "value": "/api/v1/point_tile/11/1511/859.pbf"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/point_tile/11/1512/858.pbf",
+            "value": "/api/v1/point_tile/11/1512/858.pbf"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/point_tile/11/1512/859.pbf",
+            "value": "/api/v1/point_tile/11/1512/859.pbf"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/point_tile/11/1513/858.pbf",
+            "value": "/api/v1/point_tile/11/1513/858.pbf"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/point_tile/12/3018/1719.pbf",
+            "value": "/api/v1/point_tile/12/3018/1719.pbf"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/point_tile/12/3021/1717.pbf",
+            "value": "/api/v1/point_tile/12/3021/1717.pbf"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/point_tile/12/3022/1717.pbf",
+            "value": "/api/v1/point_tile/12/3022/1717.pbf"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/point_tile/12/3022/1718.pbf",
+            "value": "/api/v1/point_tile/12/3022/1718.pbf"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/point_tile/12/3022/1719.pbf",
+            "value": "/api/v1/point_tile/12/3022/1719.pbf"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/point_tile/12/3023/1718.pbf",
+            "value": "/api/v1/point_tile/12/3023/1718.pbf"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/point_tile/12/3023/1719.pbf",
+            "value": "/api/v1/point_tile/12/3023/1719.pbf"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/point_tile/12/3024/1716.pbf",
+            "value": "/api/v1/point_tile/12/3024/1716.pbf"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/point_tile/12/3024/1717.pbf",
+            "value": "/api/v1/point_tile/12/3024/1717.pbf"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/point_tile/12/3024/1718.pbf",
+            "value": "/api/v1/point_tile/12/3024/1718.pbf"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/point_tile/12/3024/1719.pbf",
+            "value": "/api/v1/point_tile/12/3024/1719.pbf"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/point_tile/12/3025/1716.pbf",
+            "value": "/api/v1/point_tile/12/3025/1716.pbf"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/point_tile/12/3025/1717.pbf",
+            "value": "/api/v1/point_tile/12/3025/1717.pbf"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/point_tile/12/3025/1718.pbf",
+            "value": "/api/v1/point_tile/12/3025/1718.pbf"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/point_tile/12/3025/1719.pbf",
+            "value": "/api/v1/point_tile/12/3025/1719.pbf"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/point_tile/13/6036/3439.pbf",
+            "value": "/api/v1/point_tile/13/6036/3439.pbf"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/point_tile/13/6045/3436.pbf",
+            "value": "/api/v1/point_tile/13/6045/3436.pbf"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/point_tile/13/6045/3437.pbf",
+            "value": "/api/v1/point_tile/13/6045/3437.pbf"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/point_tile/13/6046/3436.pbf",
+            "value": "/api/v1/point_tile/13/6046/3436.pbf"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/point_tile/13/6046/3437.pbf",
+            "value": "/api/v1/point_tile/13/6046/3437.pbf"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/point_tile/13/6047/3436.pbf",
+            "value": "/api/v1/point_tile/13/6047/3436.pbf"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/point_tile/13/6047/3437.pbf",
+            "value": "/api/v1/point_tile/13/6047/3437.pbf"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/point_tile/13/6047/3438.pbf",
+            "value": "/api/v1/point_tile/13/6047/3438.pbf"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/point_tile/13/6048/3437.pbf",
+            "value": "/api/v1/point_tile/13/6048/3437.pbf"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/point_tile/13/6049/3437.pbf",
+            "value": "/api/v1/point_tile/13/6049/3437.pbf"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/point_tile/14/12072/6879.pbf",
+            "value": "/api/v1/point_tile/14/12072/6879.pbf"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/point_tile/14/12093/6873.pbf",
+            "value": "/api/v1/point_tile/14/12093/6873.pbf"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/point_tile/14/12093/6874.pbf",
+            "value": "/api/v1/point_tile/14/12093/6874.pbf"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/point_tile/14/12094/6875.pbf",
+            "value": "/api/v1/point_tile/14/12094/6875.pbf"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/point_tile/14/12095/6873.pbf",
+            "value": "/api/v1/point_tile/14/12095/6873.pbf"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/point_tile/14/12095/6874.pbf",
+            "value": "/api/v1/point_tile/14/12095/6874.pbf"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/point_tile/14/12095/6875.pbf",
+            "value": "/api/v1/point_tile/14/12095/6875.pbf"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/point_tile/14/12096/6874.pbf",
+            "value": "/api/v1/point_tile/14/12096/6874.pbf"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/point_tile/14/12096/6875.pbf",
+            "value": "/api/v1/point_tile/14/12096/6875.pbf"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/point_tile/15/24145/13758.pbf",
+            "value": "/api/v1/point_tile/15/24145/13758.pbf"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/point_tile/15/24190/13748.pbf",
+            "value": "/api/v1/point_tile/15/24190/13748.pbf"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/point_tile/15/24191/13748.pbf",
+            "value": "/api/v1/point_tile/15/24191/13748.pbf"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/point_tile/16/48291/27516.pbf",
+            "value": "/api/v1/point_tile/16/48291/27516.pbf"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/point_tile/17/96583/55033.pbf",
+            "value": "/api/v1/point_tile/17/96583/55033.pbf"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/point_tile/18/193167/110066.pbf",
+            "value": "/api/v1/point_tile/18/193167/110066.pbf"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/point_tile/19/386335/220133.pbf",
+            "value": "/api/v1/point_tile/19/386335/220133.pbf"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/point_tile/20/772670/440267.pbf",
+            "value": "/api/v1/point_tile/20/772670/440267.pbf"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/point_tile/9/376/213.pbf",
+            "value": "/api/v1/point_tile/9/376/213.pbf"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/point_tile/9/376/214.pbf",
+            "value": "/api/v1/point_tile/9/376/214.pbf"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/point_tile/9/377/214.pbf",
+            "value": "/api/v1/point_tile/9/377/214.pbf"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/point_tile/9/377/215.pbf",
+            "value": "/api/v1/point_tile/9/377/215.pbf"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/point_tile/9/378/214.pbf",
+            "value": "/api/v1/point_tile/9/378/214.pbf"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/point_tile/9/378/215.pbf",
+            "value": "/api/v1/point_tile/9/378/215.pbf"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/province/?limit=8000&offset=0",
+            "value": "/api/v1/province/?limit=8000&offset=0"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/retrieve_building_attributes/?id=2256166",
+            "value": "/api/v1/retrieve_building_attributes/?id=2256166"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/search_by_facility_name/",
+            "value": "/api/v1/search_by_facility_name/"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/ward/?limit=8000&offset=0",
+            "value": "/api/v1/ward/?limit=8000&offset=0"
+          },
+          {
+            "selected": false,
+            "text": "/b2b67e42e1fc313ba1e4.png",
+            "value": "/b2b67e42e1fc313ba1e4.png"
+          },
+          {
+            "selected": false,
+            "text": "/e8cebd16b580cb03a65a.png",
+            "value": "/e8cebd16b580cb03a65a.png"
+          },
+          {
+            "selected": false,
+            "text": "/ea7f3ed96d1e91daf9b6.png",
+            "value": "/ea7f3ed96d1e91daf9b6.png"
+          },
+          {
+            "selected": false,
+            "text": "/explore-map",
+            "value": "/explore-map"
+          },
+          {
+            "selected": false,
+            "text": "/favicon.ico",
+            "value": "/favicon.ico"
+          },
+          {
+            "selected": false,
+            "text": "/login",
+            "value": "/login"
+          },
+          {
+            "selected": false,
+            "text": "/main.1cba28aab0ceeaebfe5d.css",
+            "value": "/main.1cba28aab0ceeaebfe5d.css"
+          },
+          {
+            "selected": false,
+            "text": "/main.7bfbf9ae65205bd32922.js",
+            "value": "/main.7bfbf9ae65205bd32922.js"
+          },
+          {
+            "selected": false,
+            "text": "/runtimechunk~main.a96cdfd2bfcf03577f84.js",
+            "value": "/runtimechunk~main.a96cdfd2bfcf03577f84.js"
+          },
+          {
+            "selected": false,
+            "text": "/static/fonts/LatoBold/0-255.pbf",
+            "value": "/static/fonts/LatoBold/0-255.pbf"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/admingeom_tile/2/2/2.pbf?type=Province",
+            "value": "/api/v1/admingeom_tile/2/2/2.pbf?type=Province"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/admingeom_tile/2/3/1.pbf?type=Province",
+            "value": "/api/v1/admingeom_tile/2/3/1.pbf?type=Province"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/admingeom_tile/2/3/2.pbf?type=Province",
+            "value": "/api/v1/admingeom_tile/2/3/2.pbf?type=Province"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/admingeom_tile/3/4/2.pbf?type=Province",
+            "value": "/api/v1/admingeom_tile/3/4/2.pbf?type=Province"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/admingeom_tile/3/5/2.pbf?type=Province",
+            "value": "/api/v1/admingeom_tile/3/5/2.pbf?type=Province"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/admingeom_tile/3/6/2.pbf?type=Province",
+            "value": "/api/v1/admingeom_tile/3/6/2.pbf?type=Province"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/admingeom_tile/3/6/3.pbf?type=Province",
+            "value": "/api/v1/admingeom_tile/3/6/3.pbf?type=Province"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/admingeom_tile/3/7/2.pbf?type=Province",
+            "value": "/api/v1/admingeom_tile/3/7/2.pbf?type=Province"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/admingeom_tile/3/7/3.pbf?type=Province",
+            "value": "/api/v1/admingeom_tile/3/7/3.pbf?type=Province"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/admingeom_tile/4/10/5.pbf?type=Province",
+            "value": "/api/v1/admingeom_tile/4/10/5.pbf?type=Province"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/admingeom_tile/4/10/6.pbf?type=Province",
+            "value": "/api/v1/admingeom_tile/4/10/6.pbf?type=Province"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/admingeom_tile/4/11/5.pbf?type=Province",
+            "value": "/api/v1/admingeom_tile/4/11/5.pbf?type=Province"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/admingeom_tile/4/11/7.pbf?type=Province",
+            "value": "/api/v1/admingeom_tile/4/11/7.pbf?type=Province"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/admingeom_tile/4/12/5.pbf?type=Province",
+            "value": "/api/v1/admingeom_tile/4/12/5.pbf?type=Province"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/admingeom_tile/4/12/6.pbf?type=Province",
+            "value": "/api/v1/admingeom_tile/4/12/6.pbf?type=Province"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/admingeom_tile/4/12/7.pbf?type=Province",
+            "value": "/api/v1/admingeom_tile/4/12/7.pbf?type=Province"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/admingeom_tile/4/13/5.pbf?type=Province",
+            "value": "/api/v1/admingeom_tile/4/13/5.pbf?type=Province"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/admingeom_tile/4/13/6.pbf?type=Province",
+            "value": "/api/v1/admingeom_tile/4/13/6.pbf?type=Province"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/admingeom_tile/4/13/7.pbf?type=Province",
+            "value": "/api/v1/admingeom_tile/4/13/7.pbf?type=Province"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/admingeom_tile/5/22/12.pbf?type=Province",
+            "value": "/api/v1/admingeom_tile/5/22/12.pbf?type=Province"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/admingeom_tile/5/22/13.pbf?type=Province",
+            "value": "/api/v1/admingeom_tile/5/22/13.pbf?type=Province"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/admingeom_tile/5/22/14.pbf?type=Province",
+            "value": "/api/v1/admingeom_tile/5/22/14.pbf?type=Province"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/admingeom_tile/5/23/12.pbf?type=Province",
+            "value": "/api/v1/admingeom_tile/5/23/12.pbf?type=Province"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/admingeom_tile/5/23/14.pbf?type=Province",
+            "value": "/api/v1/admingeom_tile/5/23/14.pbf?type=Province"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/admingeom_tile/5/24/12.pbf?type=Province",
+            "value": "/api/v1/admingeom_tile/5/24/12.pbf?type=Province"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/admingeom_tile/5/24/13.pbf?type=Province",
+            "value": "/api/v1/admingeom_tile/5/24/13.pbf?type=Province"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/admingeom_tile/5/24/14.pbf?type=Province",
+            "value": "/api/v1/admingeom_tile/5/24/14.pbf?type=Province"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/admingeom_tile/5/25/12.pbf?type=Province",
+            "value": "/api/v1/admingeom_tile/5/25/12.pbf?type=Province"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/admingeom_tile/5/25/13.pbf?type=Province",
+            "value": "/api/v1/admingeom_tile/5/25/13.pbf?type=Province"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/admingeom_tile/6/45/25.pbf?type=Province",
+            "value": "/api/v1/admingeom_tile/6/45/25.pbf?type=Province"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/admingeom_tile/6/45/26.pbf?type=Province",
+            "value": "/api/v1/admingeom_tile/6/45/26.pbf?type=Province"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/admingeom_tile/6/45/27.pbf?type=Province",
+            "value": "/api/v1/admingeom_tile/6/45/27.pbf?type=Province"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/admingeom_tile/6/46/25.pbf?type=Province",
+            "value": "/api/v1/admingeom_tile/6/46/25.pbf?type=Province"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/admingeom_tile/6/46/27.pbf?type=Province",
+            "value": "/api/v1/admingeom_tile/6/46/27.pbf?type=Province"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/admingeom_tile/6/47/25.pbf?type=Province",
+            "value": "/api/v1/admingeom_tile/6/47/25.pbf?type=Province"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/admingeom_tile/6/48/25.pbf?type=Province",
+            "value": "/api/v1/admingeom_tile/6/48/25.pbf?type=Province"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/admingeom_tile/6/48/26.pbf?type=Province",
+            "value": "/api/v1/admingeom_tile/6/48/26.pbf?type=Province"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/admingeom_tile/6/48/27.pbf?type=Province",
+            "value": "/api/v1/admingeom_tile/6/48/27.pbf?type=Province"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/admingeom_tile/7/93/54.pbf?type=District",
+            "value": "/api/v1/admingeom_tile/7/93/54.pbf?type=District"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/admingeom_tile/7/94/52.pbf?type=District",
+            "value": "/api/v1/admingeom_tile/7/94/52.pbf?type=District"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/admingeom_tile/7/95/52.pbf?type=District",
+            "value": "/api/v1/admingeom_tile/7/95/52.pbf?type=District"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/admingeom_tile/8/187/108.pbf?type=District",
+            "value": "/api/v1/admingeom_tile/8/187/108.pbf?type=District"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/admingeom_tile/8/188/105.pbf?type=District",
+            "value": "/api/v1/admingeom_tile/8/188/105.pbf?type=District"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/admingeom_tile/8/189/105.pbf?type=District",
+            "value": "/api/v1/admingeom_tile/8/189/105.pbf?type=District"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/admingeom_tile/8/189/106.pbf?type=District",
+            "value": "/api/v1/admingeom_tile/8/189/106.pbf?type=District"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/admingeom_tile/8/190/105.pbf?type=District",
+            "value": "/api/v1/admingeom_tile/8/190/105.pbf?type=District"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/admingeom_tile/8/190/106.pbf?type=District",
+            "value": "/api/v1/admingeom_tile/8/190/106.pbf?type=District"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/admingeom_tile/9/378/213.pbf?type=District",
+            "value": "/api/v1/admingeom_tile/9/378/213.pbf?type=District"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/admingeom_tile/9/378/213.pbf?type=Municipality",
+            "value": "/api/v1/admingeom_tile/9/378/213.pbf?type=Municipality"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/admingeom_tile/9/379/213.pbf?type=District",
+            "value": "/api/v1/admingeom_tile/9/379/213.pbf?type=District"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/admingeom_tile/9/379/213.pbf?type=Municipality",
+            "value": "/api/v1/admingeom_tile/9/379/213.pbf?type=Municipality"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/building_tile/10/753/429.pbf",
+            "value": "/api/v1/building_tile/10/753/429.pbf"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/building_tile/10/753/430.pbf",
+            "value": "/api/v1/building_tile/10/753/430.pbf"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/building_tile/10/754/428.pbf",
+            "value": "/api/v1/building_tile/10/754/428.pbf"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/building_tile/10/754/430.pbf",
+            "value": "/api/v1/building_tile/10/754/430.pbf"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/building_tile/10/755/428.pbf",
+            "value": "/api/v1/building_tile/10/755/428.pbf"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/building_tile/10/756/428.pbf",
+            "value": "/api/v1/building_tile/10/756/428.pbf"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/building_tile/10/757/428.pbf",
+            "value": "/api/v1/building_tile/10/757/428.pbf"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/building_tile/10/757/429.pbf",
+            "value": "/api/v1/building_tile/10/757/429.pbf"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/building_tile/11/1508/859.pbf",
+            "value": "/api/v1/building_tile/11/1508/859.pbf"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/building_tile/11/1508/860.pbf",
+            "value": "/api/v1/building_tile/11/1508/860.pbf"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/building_tile/11/1509/860.pbf",
+            "value": "/api/v1/building_tile/11/1509/860.pbf"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/building_tile/11/1510/857.pbf",
+            "value": "/api/v1/building_tile/11/1510/857.pbf"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/building_tile/11/1510/860.pbf",
+            "value": "/api/v1/building_tile/11/1510/860.pbf"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/building_tile/11/1511/857.pbf",
+            "value": "/api/v1/building_tile/11/1511/857.pbf"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/building_tile/11/1512/857.pbf",
+            "value": "/api/v1/building_tile/11/1512/857.pbf"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/building_tile/11/1513/857.pbf",
+            "value": "/api/v1/building_tile/11/1513/857.pbf"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/building_tile/12/3017/1716.pbf",
+            "value": "/api/v1/building_tile/12/3017/1716.pbf"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/building_tile/12/3017/1718.pbf",
+            "value": "/api/v1/building_tile/12/3017/1718.pbf"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/building_tile/12/3017/1719.pbf",
+            "value": "/api/v1/building_tile/12/3017/1719.pbf"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/building_tile/12/3017/1720.pbf",
+            "value": "/api/v1/building_tile/12/3017/1720.pbf"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/building_tile/12/3018/1718.pbf",
+            "value": "/api/v1/building_tile/12/3018/1718.pbf"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/building_tile/12/3018/1720.pbf",
+            "value": "/api/v1/building_tile/12/3018/1720.pbf"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/building_tile/12/3019/1718.pbf",
+            "value": "/api/v1/building_tile/12/3019/1718.pbf"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/building_tile/12/3019/1719.pbf",
+            "value": "/api/v1/building_tile/12/3019/1719.pbf"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/building_tile/12/3019/1720.pbf",
+            "value": "/api/v1/building_tile/12/3019/1720.pbf"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/building_tile/12/3021/1716.pbf",
+            "value": "/api/v1/building_tile/12/3021/1716.pbf"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/building_tile/12/3022/1716.pbf",
+            "value": "/api/v1/building_tile/12/3022/1716.pbf"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/building_tile/12/3023/1716.pbf",
+            "value": "/api/v1/building_tile/12/3023/1716.pbf"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/building_tile/12/3023/1717.pbf",
+            "value": "/api/v1/building_tile/12/3023/1717.pbf"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/building_tile/13/6035/3438.pbf",
+            "value": "/api/v1/building_tile/13/6035/3438.pbf"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/building_tile/13/6035/3439.pbf",
+            "value": "/api/v1/building_tile/13/6035/3439.pbf"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/building_tile/13/6035/3440.pbf",
+            "value": "/api/v1/building_tile/13/6035/3440.pbf"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/building_tile/13/6036/3438.pbf",
+            "value": "/api/v1/building_tile/13/6036/3438.pbf"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/building_tile/13/6036/3440.pbf",
+            "value": "/api/v1/building_tile/13/6036/3440.pbf"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/building_tile/13/6037/3438.pbf",
+            "value": "/api/v1/building_tile/13/6037/3438.pbf"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/building_tile/13/6037/3439.pbf",
+            "value": "/api/v1/building_tile/13/6037/3439.pbf"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/building_tile/13/6046/3435.pbf",
+            "value": "/api/v1/building_tile/13/6046/3435.pbf"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/building_tile/13/6047/3435.pbf",
+            "value": "/api/v1/building_tile/13/6047/3435.pbf"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/building_tile/13/6048/3435.pbf",
+            "value": "/api/v1/building_tile/13/6048/3435.pbf"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/building_tile/13/6048/3436.pbf",
+            "value": "/api/v1/building_tile/13/6048/3436.pbf"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/building_tile/13/6049/3435.pbf",
+            "value": "/api/v1/building_tile/13/6049/3435.pbf"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/building_tile/13/6049/3436.pbf",
+            "value": "/api/v1/building_tile/13/6049/3436.pbf"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/building_tile/14/12073/6879.pbf",
+            "value": "/api/v1/building_tile/14/12073/6879.pbf"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/building_tile/14/12096/6873.pbf",
+            "value": "/api/v1/building_tile/14/12096/6873.pbf"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/building_tile/15/24145/13759.pbf",
+            "value": "/api/v1/building_tile/15/24145/13759.pbf"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/building_tile/15/24146/13758.pbf",
+            "value": "/api/v1/building_tile/15/24146/13758.pbf"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/building_tile/15/24146/13759.pbf",
+            "value": "/api/v1/building_tile/15/24146/13759.pbf"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/building_tile/15/24190/13749.pbf",
+            "value": "/api/v1/building_tile/15/24190/13749.pbf"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/building_tile/16/48291/27517.pbf",
+            "value": "/api/v1/building_tile/16/48291/27517.pbf"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/building_tile/16/48292/27516.pbf",
+            "value": "/api/v1/building_tile/16/48292/27516.pbf"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/building_tile/16/48292/27517.pbf",
+            "value": "/api/v1/building_tile/16/48292/27517.pbf"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/building_tile/17/96582/55033.pbf",
+            "value": "/api/v1/building_tile/17/96582/55033.pbf"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/building_tile/17/96582/55034.pbf",
+            "value": "/api/v1/building_tile/17/96582/55034.pbf"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/building_tile/17/96583/55034.pbf",
+            "value": "/api/v1/building_tile/17/96583/55034.pbf"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/building_tile/17/96584/55033.pbf",
+            "value": "/api/v1/building_tile/17/96584/55033.pbf"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/building_tile/17/96584/55034.pbf",
+            "value": "/api/v1/building_tile/17/96584/55034.pbf"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/building_tile/17/96585/55033.pbf",
+            "value": "/api/v1/building_tile/17/96585/55033.pbf"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/building_tile/17/96585/55034.pbf",
+            "value": "/api/v1/building_tile/17/96585/55034.pbf"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/building_tile/18/193167/110067.pbf",
+            "value": "/api/v1/building_tile/18/193167/110067.pbf"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/building_tile/19/386334/220133.pbf",
+            "value": "/api/v1/building_tile/19/386334/220133.pbf"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/building_tile/19/386334/220134.pbf",
+            "value": "/api/v1/building_tile/19/386334/220134.pbf"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/building_tile/19/386335/220134.pbf",
+            "value": "/api/v1/building_tile/19/386335/220134.pbf"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/building_tile/20/772669/440266.pbf",
+            "value": "/api/v1/building_tile/20/772669/440266.pbf"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/building_tile/20/772669/440267.pbf",
+            "value": "/api/v1/building_tile/20/772669/440267.pbf"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/building_tile/20/772670/440266.pbf",
+            "value": "/api/v1/building_tile/20/772670/440266.pbf"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/building_tile/20/772671/440266.pbf",
+            "value": "/api/v1/building_tile/20/772671/440266.pbf"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/building_tile/20/772671/440267.pbf",
+            "value": "/api/v1/building_tile/20/772671/440267.pbf"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/building_tile/9/377/213.pbf",
+            "value": "/api/v1/building_tile/9/377/213.pbf"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/building_tile/9/378/213.pbf",
+            "value": "/api/v1/building_tile/9/378/213.pbf"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/building_tile/9/379/213.pbf",
+            "value": "/api/v1/building_tile/9/379/213.pbf"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/point_tile/10/753/429.pbf",
+            "value": "/api/v1/point_tile/10/753/429.pbf"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/point_tile/10/753/430.pbf",
+            "value": "/api/v1/point_tile/10/753/430.pbf"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/point_tile/10/754/428.pbf",
+            "value": "/api/v1/point_tile/10/754/428.pbf"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/point_tile/10/754/430.pbf",
+            "value": "/api/v1/point_tile/10/754/430.pbf"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/point_tile/10/755/428.pbf",
+            "value": "/api/v1/point_tile/10/755/428.pbf"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/point_tile/10/756/428.pbf",
+            "value": "/api/v1/point_tile/10/756/428.pbf"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/point_tile/10/757/428.pbf",
+            "value": "/api/v1/point_tile/10/757/428.pbf"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/point_tile/10/757/429.pbf",
+            "value": "/api/v1/point_tile/10/757/429.pbf"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/point_tile/11/1508/859.pbf",
+            "value": "/api/v1/point_tile/11/1508/859.pbf"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/point_tile/11/1508/860.pbf",
+            "value": "/api/v1/point_tile/11/1508/860.pbf"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/point_tile/11/1509/860.pbf",
+            "value": "/api/v1/point_tile/11/1509/860.pbf"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/point_tile/11/1510/857.pbf",
+            "value": "/api/v1/point_tile/11/1510/857.pbf"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/point_tile/11/1510/860.pbf",
+            "value": "/api/v1/point_tile/11/1510/860.pbf"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/point_tile/11/1511/857.pbf",
+            "value": "/api/v1/point_tile/11/1511/857.pbf"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/point_tile/11/1512/857.pbf",
+            "value": "/api/v1/point_tile/11/1512/857.pbf"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/point_tile/11/1513/857.pbf",
+            "value": "/api/v1/point_tile/11/1513/857.pbf"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/point_tile/12/3017/1718.pbf",
+            "value": "/api/v1/point_tile/12/3017/1718.pbf"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/point_tile/12/3017/1719.pbf",
+            "value": "/api/v1/point_tile/12/3017/1719.pbf"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/point_tile/12/3017/1720.pbf",
+            "value": "/api/v1/point_tile/12/3017/1720.pbf"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/point_tile/12/3018/1718.pbf",
+            "value": "/api/v1/point_tile/12/3018/1718.pbf"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/point_tile/12/3018/1720.pbf",
+            "value": "/api/v1/point_tile/12/3018/1720.pbf"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/point_tile/12/3019/1718.pbf",
+            "value": "/api/v1/point_tile/12/3019/1718.pbf"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/point_tile/12/3019/1719.pbf",
+            "value": "/api/v1/point_tile/12/3019/1719.pbf"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/point_tile/12/3019/1720.pbf",
+            "value": "/api/v1/point_tile/12/3019/1720.pbf"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/point_tile/12/3022/1716.pbf",
+            "value": "/api/v1/point_tile/12/3022/1716.pbf"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/point_tile/12/3023/1716.pbf",
+            "value": "/api/v1/point_tile/12/3023/1716.pbf"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/point_tile/12/3023/1717.pbf",
+            "value": "/api/v1/point_tile/12/3023/1717.pbf"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/point_tile/13/6035/3438.pbf",
+            "value": "/api/v1/point_tile/13/6035/3438.pbf"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/point_tile/13/6035/3439.pbf",
+            "value": "/api/v1/point_tile/13/6035/3439.pbf"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/point_tile/13/6036/3438.pbf",
+            "value": "/api/v1/point_tile/13/6036/3438.pbf"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/point_tile/13/6037/3438.pbf",
+            "value": "/api/v1/point_tile/13/6037/3438.pbf"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/point_tile/13/6037/3439.pbf",
+            "value": "/api/v1/point_tile/13/6037/3439.pbf"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/point_tile/13/6045/3435.pbf",
+            "value": "/api/v1/point_tile/13/6045/3435.pbf"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/point_tile/13/6046/3435.pbf",
+            "value": "/api/v1/point_tile/13/6046/3435.pbf"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/point_tile/13/6047/3435.pbf",
+            "value": "/api/v1/point_tile/13/6047/3435.pbf"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/point_tile/13/6048/3435.pbf",
+            "value": "/api/v1/point_tile/13/6048/3435.pbf"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/point_tile/13/6048/3436.pbf",
+            "value": "/api/v1/point_tile/13/6048/3436.pbf"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/point_tile/13/6049/3435.pbf",
+            "value": "/api/v1/point_tile/13/6049/3435.pbf"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/point_tile/13/6049/3436.pbf",
+            "value": "/api/v1/point_tile/13/6049/3436.pbf"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/point_tile/14/12073/6879.pbf",
+            "value": "/api/v1/point_tile/14/12073/6879.pbf"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/point_tile/14/12094/6873.pbf",
+            "value": "/api/v1/point_tile/14/12094/6873.pbf"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/point_tile/14/12094/6874.pbf",
+            "value": "/api/v1/point_tile/14/12094/6874.pbf"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/point_tile/14/12096/6873.pbf",
+            "value": "/api/v1/point_tile/14/12096/6873.pbf"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/point_tile/15/24145/13759.pbf",
+            "value": "/api/v1/point_tile/15/24145/13759.pbf"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/point_tile/15/24146/13758.pbf",
+            "value": "/api/v1/point_tile/15/24146/13758.pbf"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/point_tile/15/24146/13759.pbf",
+            "value": "/api/v1/point_tile/15/24146/13759.pbf"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/point_tile/15/24188/13747.pbf",
+            "value": "/api/v1/point_tile/15/24188/13747.pbf"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/point_tile/15/24189/13747.pbf",
+            "value": "/api/v1/point_tile/15/24189/13747.pbf"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/point_tile/16/48291/27517.pbf",
+            "value": "/api/v1/point_tile/16/48291/27517.pbf"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/point_tile/16/48292/27516.pbf",
+            "value": "/api/v1/point_tile/16/48292/27516.pbf"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/point_tile/16/48292/27517.pbf",
+            "value": "/api/v1/point_tile/16/48292/27517.pbf"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/point_tile/17/96582/55033.pbf",
+            "value": "/api/v1/point_tile/17/96582/55033.pbf"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/point_tile/17/96582/55034.pbf",
+            "value": "/api/v1/point_tile/17/96582/55034.pbf"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/point_tile/17/96583/55034.pbf",
+            "value": "/api/v1/point_tile/17/96583/55034.pbf"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/point_tile/17/96584/55033.pbf",
+            "value": "/api/v1/point_tile/17/96584/55033.pbf"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/point_tile/17/96584/55034.pbf",
+            "value": "/api/v1/point_tile/17/96584/55034.pbf"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/point_tile/17/96585/55033.pbf",
+            "value": "/api/v1/point_tile/17/96585/55033.pbf"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/point_tile/17/96585/55034.pbf",
+            "value": "/api/v1/point_tile/17/96585/55034.pbf"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/point_tile/18/193167/110067.pbf",
+            "value": "/api/v1/point_tile/18/193167/110067.pbf"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/point_tile/19/386334/220133.pbf",
+            "value": "/api/v1/point_tile/19/386334/220133.pbf"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/point_tile/19/386334/220134.pbf",
+            "value": "/api/v1/point_tile/19/386334/220134.pbf"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/point_tile/19/386335/220134.pbf",
+            "value": "/api/v1/point_tile/19/386335/220134.pbf"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/point_tile/20/772669/440266.pbf",
+            "value": "/api/v1/point_tile/20/772669/440266.pbf"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/point_tile/20/772669/440267.pbf",
+            "value": "/api/v1/point_tile/20/772669/440267.pbf"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/point_tile/20/772670/440266.pbf",
+            "value": "/api/v1/point_tile/20/772670/440266.pbf"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/point_tile/20/772671/440266.pbf",
+            "value": "/api/v1/point_tile/20/772671/440266.pbf"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/point_tile/20/772671/440267.pbf",
+            "value": "/api/v1/point_tile/20/772671/440267.pbf"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/point_tile/9/377/213.pbf",
+            "value": "/api/v1/point_tile/9/377/213.pbf"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/point_tile/9/378/213.pbf",
+            "value": "/api/v1/point_tile/9/378/213.pbf"
+          },
+          {
+            "selected": false,
+            "text": "/api/v1/point_tile/9/379/213.pbf",
+            "value": "/api/v1/point_tile/9/379/213.pbf"
+          }
+        ],
+        "query": {
+          "query": "label_values({__name__=\"nginx_resp_time\"},uri)",
+          "refId": "StandardVariableQuery"
+        },
+        "refresh": 0,
+        "regex": "",
+        "skipUrlSync": false,
+        "sort": 0,
+        "tagValuesQuery": "",
+        "tags": [],
+        "tagsQuery": "",
+        "type": "query",
+        "useTags": false
+      }
+    ]
+  },
+  "time": {
+    "from": "now-3h",
+    "to": "now"
+  },
+  "timepicker": {},
+  "timezone": "",
+  "title": "Nischal-Endpoint test",
+  "uid": "V-1DcEb4z",
+  "version": 34
+}

@@ -12,6 +12,3 @@ services:
       - ./exporter-data/seek_index:/code/exporter-data
     environment:
       - LOG_FILE_NAME=jsonesc.access
-
-    
-  
